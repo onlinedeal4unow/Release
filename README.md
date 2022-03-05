@@ -2,61 +2,35 @@
 
 ## Release schedule
 
-| Release  | Status              | Codename    |Initial Release | Active LTS Start | Maintenance Start | End-of-life               |
-| :--:     | :---:               | :---:       | :---:          | :---:            | :---:             | :---:                     |
-| [12.x][] | **Maintenance**     | [Erbium][]  | 2019-04-23     | 2019-10-21       | 2020-11-30        | 2022-04-30                |
-| [14.x][] | **Maintenance**     | [Fermium][] | 2020-04-21     | 2020-10-27       | 2021-10-19        | 2023-04-30                |
-| [16.x][] | **Active LTS**      | [Gallium][] | 2021-04-20     | 2021-10-26       | 2022-10-18        | 2024-04-30                |
-| [17.x][] | **Current**         |             | 2021-10-19     | -                | 2022-04-01        | 2022-06-01                |
-| 18.x     | **Pending**         |             | 2022-04-19     | 2022-10-25       | 2023-10-18        | 2025-04-30                |
-| 19.x     | **Pending**         |             | 2022-10-18     | -                | 2023-04-01        | 2023-06-01                |
-| 20.x     | **Pending**         |             | 2023-04-18     | 2023-10-24       | 2024-10-22        | 2026-04-30                |
+| Release | Status              | Codename   |Initial Release | Active LTS Start | Maintenance LTS Start | End-of-life               |
+| :--:    | :---:               | :---:      | :---:          | :---:            | :---:                 | :---:                     |
+| [6.x][] | **Active LTS**      | [Boron][]  | 2016-04-26     | 2016-10-18       | 2018-04-30            | April 2019                |
+| [8.x][] | **Active LTS**      | [Carbon][] | 2017-05-30     | 2017-10-31       | April 2019            | December 2019<sup>1</sup> |
+| 9.x     |                     |            | 2017-10-01     |                  |                       | June 2018                 |
+| 10.x    | **Current Release** | Dubnium    | 2018-04-24     | October 2018     | April 2020            | April 2021                |
+| 11.x    | **Pending**         |            | 2018-04-23     |                  |                       | June 2019                 |
 
 Dates are subject to change.
 
-<p><img src="schedule.svg" alt="LTS Schedule"/></p>
+* <sup>1</sup>: The 8.x *Maintenance* LTS cycle is currently scheduled to expire
+  early on December 31, 2019 to align with the scheduled End-of-Life of
+  OpenSSL-1.0.2.
 
-The Release schedule is available also as a [JSON][] file.
+<p><img src="schedule.png" alt="LTS Schedule"/></p>
 
-### Release Phases
-
-There are three phases that a Node.js release can be in: 'Current', 'Active
-Long Term Support (LTS)', and 'Maintenance'. Odd-numbered release lines are not
-promoted to LTS - they will not go through the 'Active LTS' or 'Maintenance'
-phases.
-
- * Current - Should incorporate most of the non-major (non-breaking)
- changes that land on `nodejs/node` master branch.
- * Active LTS - New features, bug fixes, and updates that have been audited by
- the LTS team and have been determined to be appropriate and stable for the
- release line.
- * Maintenance - Critical bug fixes and security updates. New features may be
- added at the discretion of the LTS team - typically only in cases where
- the new feature supports migration to later release lines.
-
-Changes required for critical security and bug fixes may lead to *semver-major*
-changes landing within a release stream, such situations will be rare and will
-land as *semver-minor*.
-
-The term 'supported release lines' will be used to refer to all release lines
-that are not End-of-Life.
+The Release schedule is available also as a [JSON][] file. There is
+also a live [Google Calendar][] that may be subscribed to. The Release schedule
+is generated using the [lts module][].
 
 ### End-of-Life Releases
 
-|  Release |      Status     |  Codename | Initial Release | Active LTS Start | Maintenance LTS Start | End-of-life |
-|:--------:|:---------------:|:---------:|:---------------:|:----------------:|:---------------------:|:-----------:|
-|  v0.10.x | **End-of-Life** |     -     |    2013-03-11   |         -        |       2015-10-01      |  2016-10-31 |
-|  v0.12.x | **End-of-Life** |     -     |    2015-02-06   |         -        |       2016-04-01      |  2016-12-31 |
-|  [4.x][] | **End-of-Life** | [Argon][] |    2015-09-08   |    2015-10-01    |       2017-04-01      |  2018-04-30 |
-|  [5.x][] | **End-of-Life** |           |    2015-10-29   |         -        |                       |  2016-06-30 |
-|  [6.x][] | **End-of-Life** | [Boron][] |    2016-04-26   |    2016-10-18    |       2018-04-30      |  2019-04-30 |
-|  [7.x][] | **End-of-Life** |           |    2016-10-25   |         -        |                       |  2017-06-30 |
-|  [8.x][] | **End-of-Life** | [Carbon][]|    2017-05-30   |    2017-10-31    |       2019-01-01      |  2019-12-31 |
-|  [9.x][] | **End-of-Life** |           |    2017-10-01   |         -        |                       |  2018-06-30 |
-| [10.x][] | **End-of-Life** |[Dubnium][]|    2018-04-24   |    2018-10-30    |       2020-05-19      |  2021-04-30 |
-| [11.x][] | **End-of-Life** |           |    2018-10-23   |         -        |                       |  2019-06-01 |
-| [13.x][] | **End-of-Life** |           |    2019-10-22   |         -        |                       |  2020-06-01 |
-| [15.x][] | **End-of-Life** |           |    2020-10-20   |         -        |                       |  2021-06-01 |
+| Release | Status              | Codename   |Initial Release | Active LTS Start | Maintenance LTS Start | End-of-life               |
+| :--:    | :---:               | :---:      | :---:          | :---:            | :---:                 | :---:                     |
+| v0.10.x | **End-of-Life**     | -          | 2013-03-11     | -                | 2015-10-01            | 2016-10-31                |
+| v0.12.x | **End-of-Life**     | -          | 2015-02-06     | -                | 2016-04-01            | 2016-12-31                |
+| [4.x][] | **End-of-Life**     | [Argon][]  | 2015-09-08     | 2015-10-01       | 2017-04-01            | 2018-04-30                |
+| 5.x     | **End-of-Life**     |            | 2015-10-29     |                  |                       | 2016-06-30                |
+| 7.x     | **End-of-Life**     |            | 2016-10-25     |                  |                       | 2017-06-30                |
 
 ## Mandate
 
@@ -69,7 +43,7 @@ Its responsibilities are:
 * Define the release process.
 * Define the content of releases.
 * Generate and create releases.
-* Test Releases.
+* Test Releases
 * Manage the LTS and Current branches including backporting changes to
   these branches.
 * Define the policy for what gets backported to release streams.
@@ -84,7 +58,7 @@ teams. These teams are:
 
 The `releasers` team is entrusted with the secrets and CI access to be able
 build and sign releases. **Additions to the releasers team must be approved
-by the TSC following the process outlined in GOVERNANCE.md.**
+by the TSC.**
 
 The Long Term Support (LTS) team manages the process/content of LTS releases
 and the required backporting for these releases. Additions to the LTS
@@ -98,38 +72,66 @@ Working Group.
 
 ## Release Plan
 
-New *semver-major* releases of Node.js are branched from `master` every six
-months. New even-numbered versions are released in April and odd-numbered
-versions in October.
+New semver-major releases of Node.js are cut from `master` every six months.
+New even-numbered versions (e.g. v6, v8, v10, etc) are cut in April. New
+odd-numbered versions (e.g. v5, v7, v9) are cut in October.
 
-In coordination with a new *odd-numbered* major release, the previous
-*even-numbered* major version will transition to Long Term Support. The
-transition to Long Term Support will happen in a *semver-minor* release and
-should happen after the new major version is released.
+When a new *odd-numbered* major release is cut, the previous *even-numbered*
+major version transitions to the Long Term Support plan.
 
-Every even (LTS) major version will be actively maintained for 12 months from
-the date it enters LTS coverage. Following those 12 months of active support,
-the major version will transition into "maintenance" mode for 18 months. Prior
-to Node.js 12 the active period was 18 months and the maintenance period 12
-months. See [Releases Phases](#release-phases) for details of which changes
-are expected to land during each release phase.
+Every major version covered by the LTS plan will be actively maintained for a
+period of 18 months from the date it enters LTS coverage. Following those 18
+months of active support, the major version will transition into "maintenance"
+mode for 12 additional months.
 
-The exact date that a release will be moved to LTS, moved between LTS modes,
-or deprecated will be chosen no later than the first day of the month it is to
-change. If the release team plans to change the release date, it will be done
-with no less than 14 days notice.
+The exact date that a release stream will be moved to LTS, moved between LTS
+modes, or deprecated will be chosen no later than the first day of the month.
+If it is to be changed, it will be done with no less than 14 days notice.
+
+Given this schedule, there will be no more than two active LTS releases at any
+given time, overlapping for a maximum period of six months.
+
+Once a major version enters LTS coverage, new features (semver-minor) may only
+be landed with consent of the Release working group. No semver-major
+changes other than those required for critical security fixes may be landed.
+
+Changes in an LTS-covered major version are limited to:
+
+1. Bug fixes;
+2. Security updates;
+3. Non-semver-major npm updates;
+4. Relevant documentation updates;
+5. Certain performance improvements where the risk of breaking existing
+   applications is minimal;
+6. Changes that introduce large amount of code churn where the risk of breaking
+   existing applications is low and where the change in question may
+   significantly ease the ability to backport future changes due to the
+   reduction in diff noise.
+
+Generally changes are expected to live in a *Current* release for at least 2
+weeks before being backported. It is possible for a commit to land earlier at
+the discretion of the Release working group and the maintainers of the LTS branches.
+
+Once a release moves into Maintenance mode, only ***critical*** bugs,
+***critical*** security fixes, and documentation updates will be permitted.
+
+Note that while it is possible that critical security and bug fixes may lead to
+*semver-major* changes landing within an LTS stream, such situations will be
+rare and will land as *semver-minor* bumps in the LTS covered version.
 
 All LTS releases will be assigned a codename. A list of expected upcoming
 codenames is available in [CODENAMES.md](./CODENAMES.md).
+
+An odd-numbered major release will cease to be actively updated when the
+subsequent even-numbered major release is cut.
 
 ### LTS Staging Branches
 
 Every LTS major version has two branches in the GitHub repository: a release
 branch and a staging branch. The release branch is used to cut new releases.
-Only members of the @nodejs/releasers team should land commits onto release branches.
+Only members of the release team should land commits into the release branch.
 The staging branch is used to land cherry-picked or backported commits from
-master that need to be included in a future release. Only members of
-@nodejs/backporters should land commits onto staging branches.
+master that need to be included in a future release.
 
 For example, for Node.js v4, there is a `v4.x` branch and a `v4.x-staging`
 branch. When commits land in master that must be cherry-picked for a future
@@ -138,123 +140,58 @@ commits are backported for a future Node.js v4 release, those must come in the
 form of pull requests opened against the `v4.x-staging` branch. **Commits are
 only landed in the `v4.x` branch when a new `v4.x` release is being prepared.**
 
-Generally, changes are expected to live in a *Current* release for at least 2
-weeks before being backported. It is possible for a commit to land earlier at
-the discretion of the Release working group.
+### Node abstraction layer
+
+It should be stated that the abstraction layer (currently [`NAN`][]) should
+support all *current* LTS releases. Given that Active LTS will overlap
+for a period of 6 months, this means that the abstraction layer will, at
+any given point in time, fully support a maximum of 2 LTS releases.
 
 [Argon]: https://nodejs.org/download/release/latest-argon/
 [Boron]: https://nodejs.org/download/release/latest-boron/
 [Carbon]: https://nodejs.org/download/release/latest-carbon/
-[Dubnium]: https://nodejs.org/download/release/latest-dubnium/
-[Erbium]: https://nodejs.org/download/release/latest-erbium/
-[Fermium]: https://nodejs.org/download/release/latest-fermium/
-[Gallium]: https://nodejs.org/download/release/latest-gallium/
 [4.x]: https://nodejs.org/download/release/latest-v4.x/
-[5.x]: https://nodejs.org/download/release/latest-v5.x/
 [6.x]: https://nodejs.org/download/release/latest-v6.x/
-[7.x]: https://nodejs.org/download/release/latest-v7.x/
 [8.x]: https://nodejs.org/download/release/latest-v8.x/
-[9.x]: https://nodejs.org/download/release/latest-v9.x/
-[10.x]: https://nodejs.org/download/release/latest-v10.x/
-[11.x]: https://nodejs.org/download/release/latest-v11.x/
-[12.x]: https://nodejs.org/download/release/latest-v12.x/
-[13.x]: https://nodejs.org/download/release/latest-v13.x/
-[14.x]: https://nodejs.org/download/release/latest-v14.x/
-[15.x]: https://nodejs.org/download/release/latest-v15.x/
-[16.x]: https://nodejs.org/download/release/latest-v16.x/
-[17.x]: https://nodejs.org/download/release/latest-v17.x/
+[Google Calendar]: https://calendar.google.com/calendar/ical/eln7trd6k7n6asgg49bu2vqn4s%40group.calendar.google.com/public/basic.ics
 [JSON]: schedule.json
+[lts module]: https://www.npmjs.com/package/lts
+[`NAN`]: https://github.com/nodejs/nan
 
 The working group members are the union of the LTS, Releasers
 and CITGM team members listed below.
 
 ## LTS Team members
-
-<!-- ncu-team-sync.team(nodejs/lts) -->
-
-- [@BethGriggs](https://github.com/BethGriggs) - Bethany Nicolle Griggs
-- [@BridgeAR](https://github.com/BridgeAR) - Ruben Bridgewater
-- [@codebytere](https://github.com/codebytere) - Shelley Vohr
-- [@danielleadams](https://github.com/danielleadams) - Danielle Adams
-- [@guybedford](https://github.com/guybedford) - Guy Bedford
-- [@mhdawson](https://github.com/mhdawson) - Michael Dawson
-- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
-- [@richardlau](https://github.com/richardlau) - Richard Lau
-- [@ruyadorno](https://github.com/ruyadorno) - Ruy Adorno
-- [@targos](https://github.com/targos) - Michaël Zasso
-
-<!-- ncu-team-sync end -->
-
-### Backporters team
-
-<!-- ncu-team-sync.team(nodejs/backporters) -->
-
-- [@BethGriggs](https://github.com/BethGriggs) - Bethany Nicolle Griggs
-- [@codebytere](https://github.com/codebytere) - Shelley Vohr
-- [@danielleadams](https://github.com/danielleadams) - Danielle Adams
-- [@guybedford](https://github.com/guybedford) - Guy Bedford
-- [@mhdawson](https://github.com/mhdawson) - Michael Dawson
-- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
-- [@richardlau](https://github.com/richardlau) - Richard Lau
-
-<!-- ncu-team-sync end -->
-
-## Releasers team
-
-<!-- ncu-team-sync.team(nodejs/releasers) -->
-
-- [@BethGriggs](https://github.com/BethGriggs) - Bethany Nicolle Griggs
-- [@BridgeAR](https://github.com/BridgeAR) - Ruben Bridgewater
-- [@cjihrig](https://github.com/cjihrig) - Colin Ihrig
-- [@codebytere](https://github.com/codebytere) - Shelley Vohr
-- [@danielleadams](https://github.com/danielleadams) - Danielle Adams
-- [@jasnell](https://github.com/jasnell) - James M Snell
-- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
-- [@richardlau](https://github.com/richardlau) - Richard Lau
-- [@ruyadorno](https://github.com/ruyadorno) - Ruy Adorno
-- [@targos](https://github.com/targos) - Michaël Zasso
-
-<!-- ncu-team-sync end -->
-
-## CITGM team
-
-<!-- ncu-team-sync.team(nodejs/citgm) -->
-
-- [@al-k21](https://github.com/al-k21) - Oleksandr Kushchak
-- [@BridgeAR](https://github.com/BridgeAR) - Ruben Bridgewater
-- [@bzoz](https://github.com/bzoz) - Bartosz Sosnowski
-- [@gdams](https://github.com/gdams) - George Adams
-- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
-- [@richardlau](https://github.com/richardlau) - Richard Lau
-- [@targos](https://github.com/targos) - Michaël Zasso
-
-<!-- ncu-team-sync end -->
-
-## Emeritus
-
-### LTS team
-- [@addaleax](https://github.com/addaleax) - Anna Henningsen
-- [@bnoordhuis](https://github.com/bnoordhuis) - Ben Noordhuis
-- [@ErisDS](https://github.com/ErisDS) - Hannah Wolfe
 - [@Fishrock123](https://github.com/Fishrock123) - Jeremiah Senkpiel
-- [@geek](https://github.com/geek) - Wyatt Preul
+- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
 - [@gibfahn](https://github.com/gibfahn) - Gibson Fahnestock
-- [@jasnell](https://github.com/jasnell) - James M Snell
-- [@othiym23](https://github.com/othiym23) - Forrest L Norvell
-- [@rvagg](https://github.com/rvagg) - Rod Vagg
+- [@mhdawson](https://github.com/mhdawson) - Michael Dawson
 - [@sam-github](https://github.com/sam-github) - Sam Roberts
-- [@shigeki](https://github.com/shigeki) - Shigeki Ohtsu
-- [@srl295](https://github.com/srl295) - Steven R. Loomis
-- [@trevnorris](https://github.com/trevnorris) - Trevor Norris
-- [@yunong](https://github.com/yunong) - Yunong Xiao
 
 ### Releasers team
-- [@evanlucas](https://github.com/evanlucas) - Evan Lucas
 - [@Fishrock123](https://github.com/Fishrock123) - Jeremiah Senkpiel
+- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
+- [@cjihrig](https://github.com/cjihrig) - Colin Ihrig
+- [@evanlucas](https://github.com/evanlucas) - Evan Lucas
 - [@gibfahn](https://github.com/gibfahn) - Gibson Fahnestock
+- [@italoacasas](https://github.com/italoacasas) - Italo A. Casas
+- [@jasnell](https://github.com/jasnell) - James M Snell
 - [@rvagg](https://github.com/rvagg) - Rod Vagg
 
 ### CITGM team
+- [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
+- [@al-k21](https://github.com/al-k21) - Oleksandr Kushchak
 - [@bengl](https://github.com/bengl) - Bryan English
+- [@bzoz](https://github.com/bzoz) - Bartosz Sosnowski
+- [@gdams](https://github.com/gdams) - George Adams
 - [@gibfahn](https://github.com/gibfahn) - Gibson Fahnestock
+- [@richardlau](https://github.com/richardlau) - Richard Lau
+- [@targos](https://github.com/targos) - Michaël Zasso
+
+### Emeritus
+
+#### LTS Team members
+- [@jasnell](https://github.com/jasnell) - James M Snell
+
+#### CITGM team
 - [@jasnell](https://github.com/jasnell) - James M Snell
